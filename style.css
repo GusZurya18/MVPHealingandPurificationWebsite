@@ -1,4 +1,4 @@
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -301,9 +301,71 @@
             color: white;
         }
 
+        /* Google Maps Section */
+        .map-section {
+            background: #f9f6f0;
+            position: relative;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(26, 77, 60, 0.15);
+        }
+
+        .map-container iframe {
+            display: block;
+        }
+
+        .map-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .map-info-item {
+            background: white;
+            padding: 35px 30px;
+            display: flex;
+            align-items: start;
+            gap: 20px;
+            transition: all 0.4s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .map-info-item:hover {
+            transform: translateY(-8px);
+            border-bottom-color: #2d5a47;
+            box-shadow: 0 15px 40px rgba(26, 77, 60, 0.15);
+        }
+
+        .map-icon {
+            font-size: 2.5em;
+            color: #2d5a47;
+        }
+
+        .map-info-item h4 {
+            font-size: 1.3em;
+            color: #1a4d3c;
+            margin-bottom: 8px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .map-info-item p {
+            color: #5a6a5d;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
         /* Gallery Section */
         .gallery-section {
-            background: #f9f6f0;
+            background: white;
         }
 
         .gallery-grid {
@@ -361,6 +423,81 @@
             font-size: 1em;
             opacity: 0.9;
             line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: #f9f6f0;
+            position: relative;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 45px 40px;
+            border-left: 4px solid #2d5a47;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(26, 77, 60, 0.15);
+        }
+
+        .testimonial-stars {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            color: #f4a261;
+        }
+
+        .testimonial-text {
+            color: #4a5a4d;
+            font-size: 1.08em;
+            line-height: 1.9;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding-top: 25px;
+            border-top: 1px solid #e8e5dc;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #2d5a47, #1a4d3c);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-size: 1.2em;
+            color: #1a4d3c;
+            margin-bottom: 5px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .author-info p {
+            color: #7a8a7d;
+            font-size: 0.95em;
+            font-style: normal;
         }
 
         /* Packages Section - IMPROVED CARD DESIGN */
@@ -824,6 +961,9 @@
             .packages-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
         }
 
         @media (max-width: 768px) {
@@ -851,6 +991,14 @@
             }
 
             .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-info {
                 grid-template-columns: 1fr;
             }
 
