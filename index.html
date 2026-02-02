@@ -5,17 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healing Energy & Purification - Authentic Balinese Spiritual Experience</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <script src="script.js"></script>
+    <!-- Booking Form Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Your Spiritual Experience</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="packageSelect">Select Package *</label>
+                        <select id="packageSelect" class="form-control" required>
+                            <option value="">Select a package</option>
+                            <option value="Purification">Purification - Rp 350K (2 Hours)</option>
+                            <option value="Healing Energy">Healing Energy - Rp 500K (3 Hours)</option>
+                            <option value="Complete">Complete - Rp 750K (5 Hours)</option>
+                            <option value="Group Session">Group Session - Rp 2.5M (4 Hours)</option>
+                            <option value="Couple Retreat">Couple Retreat - Rp 900K (4 Hours)</option>
+                            <option value="Monthly Program">Monthly Program - Rp 1.8M (4 Sessions/Month)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">WhatsApp Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+628123456789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="participants">Number of Participants *</label>
+                            <input type="number" id="participants" class="form-control" min="1" value="1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="time">Preferred Time *</label>
+                            <select id="time" class="form-control" required>
+                                <option value="">Select time</option>
+                                <option value="08:00">08:00 AM</option>
+                                <option value="09:00">09:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="13:00">01:00 PM</option>
+                                <option value="14:00">02:00 PM</option>
+                                <option value="15:00">03:00 PM</option>
+                                <option value="16:00">04:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationality">Nationality *</label>
+                            <input type="text" id="nationality" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Special Requests or Notes</label>
+                        <textarea id="message" class="form-control" rows="3" placeholder="Any health considerations, spiritual goals, or special requests..."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the terms and conditions *</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Complete Booking via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero-content">
             <h1>HEALING ENERGY</h1>
             <p class="hero-subtitle">& Purification</p>
             <p class="hero-tagline">Spiritual experience and inner peace<br>based on authentic Balinese traditions</p>
-            <a href="https://wa.me/6281234567890?text=Hello,%20I'm%20interested%20in%20Healing%20Energy%20%26%20Purification%20services" class="btn" target="_blank">Book Now</a>
+            <button class="btn" onclick="openBookingModal()">Book Now</button>
         </div>
         <div class="scroll-indicator">↓</div>
     </div>
@@ -334,7 +418,7 @@
                             <li>Spiritual guidance</li>
                             <li>Cleansing prayers and mantras</li>
                         </ul>
-                        <a href="https://wa.me/6281234567890?text=Hello,%20I'm%20interested%20in%20the%20Purification%20Package%20(Rp%20350K)" class="btn-book" target="_blank">Book Now</a>
+                        <button class="btn-book" onclick="openBookingModal('Purification')">Book Now</button>
                     </div>
                 </div>
 
@@ -361,7 +445,7 @@
                             <li>Chakra balancing</li>
                             <li>Herbal tea and snacks</li>
                         </ul>
-                        <a href="https://wa.me/6289524628424?text=Hello,%20I'm%20interested%20in%20the%20Healing%20Energy%20Package%20(Rp%20500K)" class="btn-book" target="_blank">Book Now</a>
+                        <button class="btn-book" onclick="openBookingModal('Healing Energy')">Book Now</button>
                     </div>
                 </div>
 
@@ -388,7 +472,7 @@
                             <li>Traditional vegetarian meal</li>
                             <li>Ritual photo documentation</li>
                         </ul>
-                        <a href="https://wa.me/6281234567890?text=Hello,%20I'm%20interested%20in%20the%20Complete%20Package%20(Rp%20750K)" class="btn-book" target="_blank">Book Now</a>
+                        <button class="btn-book" onclick="openBookingModal('Complete')">Book Now</button>
                     </div>
                 </div>
 
@@ -414,7 +498,7 @@
                             <li>Complete offerings and supplies</li>
                             <li>Light refreshments and drinks</li>
                         </ul>
-                        <a href="https://wa.me/6281234567890?text=Hello,%20I'm%20interested%20in%20the%20Group%20Session%20Package%20(Rp%202.5M)" class="btn-book" target="_blank">Book Now</a>
+                        <button class="btn-book" onclick="openBookingModal('Group Session')">Book Now</button>
                     </div>
                 </div>
 
@@ -440,7 +524,7 @@
                             <li>Blessing ritual</li>
                             <li>Exclusive private session</li>
                         </ul>
-                        <a href="https://wa.me/6281234567890?text=Hello,%20I'm%20interested%20in%20the%20Couple%20Retreat%20Package%20(Rp%20900K)" class="btn-book" target="_blank">Book Now</a>
+                        <button class="btn-book" onclick="openBookingModal('Couple Retreat')">Book Now</button>
                     </div>
                 </div>
 
@@ -466,7 +550,7 @@
                             <li>20% discount from regular price</li>
                             <li>Bonus 1 online consultation session</li>
                         </ul>
-                        <a href="https://wa.me/6281234567890?text=Hello,%20I'm%20interested%20in%20the%20Monthly%20Program%20Package%20(Rp%201.8M)" class="btn-book" target="_blank">Book Now</a>
+                        <button class="btn-book" onclick="openBookingModal('Monthly Program')">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -489,7 +573,7 @@
                         Guided by experienced practitioners at carefully selected sacred locations.
                     </p>
                     <div class="footer-social">
-                        <a href="https://wa.me/6281234567890" class="social-link" target="_blank">📱</a>
+                        <a href="https://wa.me/6289524628424" class="social-link" target="_blank">📱</a>
                         <a href="https://instagram.com/healingenergy.bali" class="social-link" target="_blank">📷</a>
                         <a href="mailto:info@healingenergy.com" class="social-link" target="_blank">✉️</a>
                     </div>
@@ -558,8 +642,10 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6287702010614?text=Hello,%20I%20have%20a%20question%20about%20Healing%20Energy%20%26%20Purification" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/6289524628424?text=Hello,%20I%20have%20a%20question%20about%20Healing%20Energy%20%26%20Purification" class="whatsapp-float" target="_blank">
         💬
     </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
