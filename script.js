@@ -123,7 +123,7 @@ _This booking request was submitted via Healing Energy & Purification website._`
     const whatsappMessage = encodeURIComponent(messageContent);
     
     // Your WhatsApp number
-    const whatsappNumber = '628983181563';
+    const whatsappNumber = '6289524628424';
     
     // Open WhatsApp with the message
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
