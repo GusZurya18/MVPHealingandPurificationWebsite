@@ -1412,6 +1412,705 @@
             .footer-brand { padding-right: 0; }
             .footer-bottom-content { flex-direction: column; text-align: center; }
         }
+        /* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+    /* Atur ulang posisi semua widget fixed */
+    .audio-ambient {
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+    
+    .audio-toggle {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .audio-text {
+        display: none; /* Sembunyikan teks di HP */
+    }
+    
+    .audio-icon {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    
+    /* Daily Blessing - Bisa ditutup */
+    .daily-blessing {
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 320px;
+        z-index: 1000;
+        animation: slideUp 0.3s ease;
+        display: none; /* Default hidden */
+    }
+    
+    .daily-blessing.show {
+        display: block;
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translate(-50%, 20px);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }
+    
+    /* Tombol close untuk Daily Blessing */
+    .blessing-close-mobile {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #1a4d3c;
+        color: #f5f5dc;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+    }
+    
+    .blessing-close-mobile:hover {
+        background: #2d5a47;
+    }
+    
+    /* Back to Top - Pindah ke kiri */
+    #backToTop {
+        bottom: 20px;
+        left: 20px;
+        right: auto;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    /* Stats counter di mobile */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 20px 10px;
+    }
+    
+    .stat-icon {
+        font-size: 2.5em;
+    }
+    
+    .stat-number {
+        font-size: 2em;
+    }
+    
+    .stat-label {
+        font-size: 0.9em;
+    }
+    
+    /* Gallery di mobile */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .gallery-item {
+        height: 300px;
+    }
+    
+    /* Testimonials slider di mobile */
+    .testimonials-slider {
+        padding: 0 40px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+    
+    /* Packages di mobile */
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .package-card {
+        max-width: 100%;
+    }
+    
+    .package-card.featured {
+        transform: scale(1);
+    }
+    
+    /* Navigation mobile */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(26, 77, 60, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+        display: none;
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-links.show {
+        display: flex;
+    }
+    
+    /* Hamburger menu */
+    .hamburger-menu {
+        display: block;
+        font-size: 2em;
+        color: #f5f5dc;
+        cursor: pointer;
+    }
+    
+    /* Hero section mobile */
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    
+    /* Section titles mobile */
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 40px;
+    }
+    
+    /* About section mobile */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-image-large {
+        height: 300px;
+        font-size: 6em;
+    }
+    
+    .about-text-content h3 {
+        font-size: 1.8em;
+    }
+    
+    /* Service cards mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    /* Contact section mobile */
+    .contact {
+        padding: 60px 20px;
+    }
+    
+    .contact h2 {
+        font-size: 2em;
+    }
+    
+    .contact-info {
+        font-size: 1em;
+    }
+    
+    /* Footer mobile */
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .footer-logo {
+        font-size: 1.8em;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    /* Modal mobile */
+    .modal-content {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+    
+    .modal-content h2 {
+        font-size: 2em;
+    }
+    
+    .booking-modal-content {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+    
+    .booking-modal h2 {
+        font-size: 1.8em;
+    }
+    
+    /* Form mobile */
+    .form-control {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .btn, .btn-submit {
+        padding: 15px 30px;
+        font-size: 0.9em;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .daily-blessing {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .blessing-quote {
+        font-size: 14px;
+        min-height: 80px;
+    }
+    
+    .audio-toggle {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .testimonials-slider {
+        padding: 0 30px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+}
+        /* ===== STATS COUNTER SECTION ===== */
+.stats-section {
+    background: linear-gradient(135deg, #1a4d3c 0%, #2d5a47 100%);
+    color: #f5f5dc;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="3" fill="%23f5f5dc" opacity="0.1"/></svg>');
+    opacity: 0.1;
+}
+
+.stats-section .section-title,
+.stats-section .section-subtitle {
+    color: #f5f5dc;
+    position: relative;
+    z-index: 1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 50px 0 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(245, 245, 220, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 245, 220, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    background: rgba(245, 245, 220, 0.15);
+}
+
+.stat-icon {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 3.5em;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    color: #f5f5dc;
+}
+
+.stat-label {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.stats-update {
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 3em;
+    }
+}
+
+/* Counter Animation */
+.stat-number.animated {
+    animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        /* Tambah ini di CSS kalau mau fitur next track */
+/* ===== AUDIO AMBIENT ===== */
+.audio-ambient {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.audio-toggle {
+    background: #2d5a47;
+    border: 2px solid #f5f5dc;
+    color: #f5f5dc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 14px;
+    padding: 5px;
+}
+
+.audio-toggle:hover {
+    background: #1a4d3c;
+    transform: scale(1.1);
+}
+
+.audio-icon {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.audio-text {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+
+.audio-toggle.playing {
+    animation: pulse 2s infinite;
+}
+
+.audio-volume {
+    background: #2d5a47;
+    border: 2px solid #f5f5dc;
+    border-radius: 30px;
+    padding: 8px 15px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.audio-ambient:hover .audio-volume {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+
+.audio-volume input {
+    width: 120px;
+    cursor: pointer;
+    accent-color: #f5f5dc;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(245, 245, 220, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(245, 245, 220, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 245, 220, 0); }
+}
+
+/* ===== DAILY BLESSING WIDGET ===== */
+.daily-blessing {
+    position: fixed;
+    bottom: 260px;
+    right: 30px;
+    background: linear-gradient(135deg, #f5f5dc, #fff5e6);
+    border: 3px solid #1a4d3c;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 15px 40px rgba(26, 77, 60, 0.3);
+    z-index: 997;
+    backdrop-filter: blur(10px);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.daily-blessing::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: #f5f5dc;
+    border-top: 3px solid #1a4d3c;
+    border-left: 3px solid #1a4d3c;
+    transform: rotate(45deg);
+}
+
+.blessing-icon {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.blessing-content h4 {
+    color: #1a4d3c;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(26, 77, 60, 0.2);
+    padding-bottom: 10px;
+}
+
+.blessing-quote {
+    color: #2d5a47;
+    font-size: 16px;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 15px;
+    min-height: 100px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.blessing-quote::before,
+.blessing-quote::after {
+    content: '"';
+    font-size: 40px;
+    color: #1a4d3c;
+    opacity: 0.2;
+    position: absolute;
+}
+
+.blessing-quote::before {
+    top: -10px;
+    left: -5px;
+}
+
+.blessing-quote::after {
+    bottom: -30px;
+    right: -5px;
+}
+
+.blessing-source {
+    color: #5a6a5d;
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 15px;
+    font-style: normal;
+}
+
+.blessing-refresh {
+    background: transparent;
+    border: 2px solid #1a4d3c;
+    color: #1a4d3c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.blessing-refresh:hover {
+    background: #1a4d3c;
+    color: #f5f5dc;
+    transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .daily-blessing {
+        bottom: 20px;
+        left: 20px;
+        right: auto;
+        width: 250px;
+    }
+}
+
+/* Show blessing button */
+.show-blessing-btn {
+    animation: bounce 2s infinite !important;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Mobile navigation */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    color: #f5f5dc;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links.show {
+        animation: slideDown 0.3s ease;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Prevent body scroll when mobile menu open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Touch-friendly buttons */
+.btn, .audio-toggle, #backToTop, .blessing-refresh, 
+.slider-btn, .gallery-tab, .quick-reply {
+    min-height: 44px; /* Apple recommendation */
+    min-width: 44px;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 60px 20px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+}
     </style>
 </head>
 <body>
@@ -1455,6 +2154,24 @@
             </ul>
         </div>
     </nav>
+    <!-- Hamburger Menu for Mobile -->
+<div class="hamburger-menu" onclick="toggleMobileMenu()">☰</div>
+
+<!-- Close button untuk Daily Blessing di mobile -->
+<button class="blessing-close-mobile" onclick="hideBlessing()" style="display: none;">✕</button>
+
+    <!-- Daily Blessing Widget -->
+<!-- Daily Blessing Widget -->
+<div class="daily-blessing" id="dailyBlessing">
+    <button class="blessing-close-mobile" onclick="hideBlessing()" id="blessingCloseBtn">✕</button>
+    <div class="blessing-icon">🕉️</div>
+    <div class="blessing-content">
+        <h4>Today's Blessing</h4>
+        <p class="blessing-quote" id="blessingQuote">Loading wisdom...</p>
+        <p class="blessing-source" id="blessingSource"></p>
+        <button class="blessing-refresh" onclick="refreshBlessing()" title="New blessing">🔄</button>
+    </div>
+</div>
 
     <div class="hero" id="home">
         <div class="hero-content">
@@ -1478,7 +2195,7 @@
             </p>
 
             <div class="about-grid">
-                <div class="about-image-large lazy-image">🏛️</div>
+                <div class="about-image-large lazy-image"></div>
                 <div class="about-text-content">
                     <h3>Our Healing Heritage</h3>
                     <p>Our therapists (Healers) are direct descendants of the Puri Agung Kendran royal family, who have studied and preserved 
@@ -1492,6 +2209,43 @@
             </div>
         </div>
     </div>
+
+     <!-- Stats Counter Section -->
+            <div class="stats-section" id="stats">
+                <div class="container">
+                    <h2 class="section-title">Our Sacred Journey</h2>
+                    <p class="section-subtitle">Numbers That Speak to the Soul</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🙏</div>
+                            <div class="stat-number" data-target="1234">0</div>
+                            <div class="stat-label">Healed Souls</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">🧘</div>
+                            <div class="stat-number" data-target="2567">0</div>
+                            <div class="stat-label">Sacred Sessions</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">⏳</div>
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Years of Wisdom</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">🌟</div>
+                            <div class="stat-number" data-target="892">0</div>
+                            <div class="stat-label">5-Star Reviews</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Update Info -->
+                    <p class="stats-update">✨ Updated monthly • Last update: March 2025</p>
+                </div>
+            </div>
 
     <div class="container" id="services">
         <h2 class="section-title">Our Healing Services</h2>
@@ -1552,21 +2306,21 @@
         <div class="gallery-grid" id="galleryGrid">
             <!-- Puri Kendran -->
             <div class="gallery-item show" data-category="puri">
-                <div class="gallery-img">🏛️</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Puri Agung Kendran</h3>
                     <p>The royal palace where healing traditions have been preserved for centuries</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="puri">
-                <div class="gallery-img">🏰</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Palace Gardens</h3>
                     <p>Tranquil healing gardens within the palace grounds</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="puri">
-                <div class="gallery-img">🌸</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Sacred Courtyard</h3>
                     <p>Traditional Balinese architecture and sacred spaces</p>
@@ -1575,21 +2329,21 @@
 
             <!-- Temple -->
             <div class="gallery-item show" data-category="temple">
-                <div class="gallery-img">⛰️</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Pura Telaga Waja</h3>
                     <p>Sacred temple with natural spring water for purification</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="temple">
-                <div class="gallery-img">💧</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Holy Water Spouts</h3>
                     <p>11 sacred water spouts for spiritual cleansing rituals</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="temple">
-                <div class="gallery-img">🕯️</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Temple Ceremonies</h3>
                     <p>Traditional Balinese purification ceremonies</p>
@@ -1598,21 +2352,21 @@
 
             <!-- Healing -->
             <div class="gallery-item show" data-category="healing">
-                <div class="gallery-img">🧘</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Meditation Space</h3>
                     <p>Tranquil environment for soul healing and meditation</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="healing">
-                <div class="gallery-img">✨</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Energy Healing</h3>
                     <p>Ancient techniques passed down through generations</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="healing">
-                <div class="gallery-img">🙏</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Spiritual Counseling</h3>
                     <p>Personal guidance from experienced healers</p>
@@ -1621,21 +2375,21 @@
 
             <!-- Nature -->
             <div class="gallery-item show" data-category="nature">
-                <div class="gallery-img">🌺</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Tropical Gardens</h3>
                     <p>Lush gardens surrounding the healing sanctuary</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="nature">
-                <div class="gallery-img">🌿</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Natural Springs</h3>
                     <p>Pure water flowing from sacred mountain sources</p>
                 </div>
             </div>
             <div class="gallery-item show" data-category="nature">
-                <div class="gallery-img">🌄</div>
+                <div class="gallery-img"></div>
                 <div class="gallery-overlay">
                     <h3>Mountain Views</h3>
                     <p>Breathtaking vistas of Bali's sacred landscapes</p>
@@ -2118,6 +2872,23 @@
         </div>
     </div>
 
+    <!-- Audio Ambient Control - UPDATE INI -->
+    <div class="audio-ambient" id="audioAmbient">
+        <button class="audio-toggle" id="audioToggle" onclick="toggleAudio()">
+            <span class="audio-icon">🔇</span>
+            <span class="audio-text">Ambient Sound</span>
+        </button>
+        <audio id="ambientAudio" loop preload="metadata">
+            <!-- GANTI INI dengan file MP3 kamu -->
+            <source src="audio/ambient-bali.mp3" type="audio/mpeg">
+            <!-- Fallback untuk browser lama -->
+            Your browser does not support the audio element.
+        </audio>
+        <div class="audio-volume" id="audioVolume">
+            <input type="range" min="0" max="1" step="0.1" value="0.3" id="volumeControl">
+        </div>
+    </div>
+
     <script>
         // IMPROVED LOADER - Hide after page loads
         window.addEventListener('load', function() {
@@ -2450,6 +3221,426 @@ _This booking was submitted via Royal Authentic Healing website - Puri Agung Ken
                 }
             });
         });
+
+    // ===== AUDIO AMBIENT DENGAN MP3 =====
+    let audio = document.getElementById('ambientAudio');
+    let audioToggle = document.getElementById('audioToggle');
+    let volumeControl = document.getElementById('volumeControl');
+    let isPlaying = false;
+
+    // Optional: Buat array playlist
+    const tracks = [
+        'audio/ambient-bali.mp3',
+        'audio/genta-bali.mp3'
+    ];
+    let currentTrack = 0;
+
+    function toggleAudio() {
+        if (isPlaying) {
+            audio.pause();
+            audioToggle.classList.remove('playing');
+            audioToggle.querySelector('.audio-icon').textContent = '🔇';
+        } else {
+            // Play audio
+            audio.volume = volumeControl.value;
+            audio.play()
+                .then(() => {
+                    audioToggle.classList.add('playing');
+                    audioToggle.querySelector('.audio-icon').textContent = '🔊';
+                })
+                .catch(error => {
+                    console.log('Audio play failed:', error);
+                    showToast('Click to enable ambient sound (browser policy)');
+                });
+        }
+        isPlaying = !isPlaying;
+    }
+
+    function nextTrack() {
+        currentTrack = (currentTrack + 1) % tracks.length;
+        audio.src = tracks[currentTrack];
+        if (isPlaying) {
+            audio.play();
+        }
+    }
+
+    // Volume control
+    volumeControl.addEventListener('input', function(e) {
+        audio.volume = e.target.value;
+    });
+
+    // Auto pause saat modal terbuka
+    document.querySelectorAll('.modal, .booking-modal').forEach(modal => {
+        modal.addEventListener('show', function() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                audioToggle.querySelector('.audio-icon').textContent = '🔇';
+                audioToggle.classList.remove('playing');
+            }
+        });
+    });
+
+    // Toast notification
+    function showToast(message) {
+        let toast = document.querySelector('.toast-notification');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 180px;
+                right: 30px;
+                background: #2d5a47;
+                color: #f5f5dc;
+                padding: 10px 20px;
+                border-radius: 30px;
+                border: 2px solid #f5f5dc;
+                z-index: 1000;
+                font-size: 14px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            `;
+            document.body.appendChild(toast);
+        }
+        toast.textContent = message;
+        toast.style.display = 'block';
+        
+        setTimeout(() => {
+            toast.style.display = 'none';
+        }, 3000);
+    }
+
+    // ===== STATS COUNTER ANIMATION =====
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 100; // Naik dalam 100 langkah
+    const duration = 2000; // 2 detik
+    const stepTime = duration / 100;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target.toLocaleString();
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current).toLocaleString();
+        }
+    }, stepTime);
+}
+
+// Observer untuk trigger animasi saat di-scroll
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            entry.target.classList.add('counted');
+            const target = parseInt(entry.target.getAttribute('data-target'));
+            animateCounter(entry.target, target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Apply observer ke semua stat-number
+document.querySelectorAll('.stat-number[data-target]').forEach(counter => {
+    statsObserver.observe(counter);
+});
+
+// ===== DAILY BLESSING / WISDOM =====
+const blessingQuotes = [
+    {
+        quote: "Peace comes from within. Do not seek it without.",
+        source: "Buddha"
+    },
+    {
+        quote: "The soul heals best when surrounded by sacred waters.",
+        source: "Balinese Proverb"
+    },
+    {
+        quote: "In the middle of difficulty lies opportunity for spiritual growth.",
+        source: "Albert Einstein"
+    },
+    {
+        quote: "The energy you give out, returns to you multiplied.",
+        source: "Ancient Wisdom"
+    },
+    {
+        quote: "Let the water cleanse not just your body, but your spirit.",
+        source: "Puri Agung Kendran"
+    },
+    {
+        quote: "Your aura reflects the peace within your heart.",
+        source: "Balinese Healer"
+    },
+    {
+        quote: "Every step on sacred ground is a prayer.",
+        source: "Traditional Saying"
+    },
+    {
+        quote: "The past does not define you, it prepares you.",
+        source: "Wisdom for Today"
+    },
+    {
+        quote: "Balance is not something you find, it's something you create.",
+        source: "Jain Yoga"
+    },
+    {
+        quote: "When the soul is healed, the body follows.",
+        source: "Royal Healing"
+    },
+    {
+        quote: "The universe speaks in whispers. Listen carefully.",
+        source: "Ancient Wisdom"
+    },
+    {
+        quote: "Today, release what no longer serves your highest good.",
+        source: "Daily Blessing"
+    },
+    {
+        quote: "Gratitude transforms what we have into enough.",
+        source: "Balinese Philosophy"
+    },
+    {
+        quote: "Your chakras are the windows to your soul's light.",
+        source: "Energy Healing"
+    },
+    {
+        quote: "In stillness, you will find your true self.",
+        source: "Meditation Wisdom"
+    }
+];
+
+function getTodaysBlessing() {
+    const today = new Date().toDateString();
+    const savedBlessing = localStorage.getItem('dailyBlessing');
+    const savedDate = localStorage.getItem('blessingDate');
+    
+    // Kalau udah ada blessing hari ini, pakai yang itu
+    if (savedDate === today && savedBlessing) {
+        return JSON.parse(savedBlessing);
+    }
+    
+    // Kalau belum, pilih random
+    const randomIndex = Math.floor(Math.random() * blessingQuotes.length);
+    const blessing = blessingQuotes[randomIndex];
+    
+    // Simpan untuk hari ini
+    localStorage.setItem('dailyBlessing', JSON.stringify(blessing));
+    localStorage.setItem('blessingDate', today);
+    
+    return blessing;
+}
+
+function updateBlessingDisplay() {
+    const blessing = getTodaysBlessing();
+    document.getElementById('blessingQuote').textContent = `"${blessing.quote}"`;
+    document.getElementById('blessingSource').textContent = `— ${blessing.source}`;
+}
+
+function refreshBlessing() {
+    // Pilih blessing baru
+    const randomIndex = Math.floor(Math.random() * blessingQuotes.length);
+    const blessing = blessingQuotes[randomIndex];
+    
+    // Update tampilan
+    document.getElementById('blessingQuote').textContent = `"${blessing.quote}"`;
+    document.getElementById('blessingSource').textContent = `— ${blessing.source}`;
+    
+    // Animasi refresh
+    const widget = document.getElementById('dailyBlessing');
+    widget.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        widget.style.transform = 'scale(1)';
+    }, 200);
+    
+    // Jangan simpan ke localStorage biar bisa refresh manual
+}
+
+// Panggil saat halaman dimuat
+document.addEventListener('DOMContentLoaded', updateBlessingDisplay);
+
+// Auto-refresh setiap jam (optional)
+setInterval(() => {
+    updateBlessingDisplay();
+}, 3600000); // 1 jam
+
+// ===== MOBILE FUNCTIONS =====
+// Toggle mobile menu
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}
+
+// Hide Daily Blessing (untuk mobile)
+function hideBlessing() {
+    const blessing = document.getElementById('dailyBlessing');
+    blessing.classList.remove('show');
+    
+    // Simpan preference ke localStorage
+    localStorage.setItem('blessingHidden', 'true');
+    
+    // Tampilkan tombol untuk membuka lagi
+    showBlessingButton();
+}
+
+// Show Daily Blessing
+function showBlessing() {
+    const blessing = document.getElementById('dailyBlessing');
+    blessing.classList.add('show');
+    
+    // Hapus preference
+    localStorage.removeItem('blessingHidden');
+    
+    // Sembunyikan tombol
+    hideBlessingButton();
+}
+
+// Tampilkan tombol floating untuk buka blessing
+function showBlessingButton() {
+    let btn = document.querySelector('.show-blessing-btn');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.className = 'show-blessing-btn';
+        btn.innerHTML = '🕉️';
+        btn.onclick = showBlessing;
+        btn.title = 'Show Daily Blessing';
+        document.body.appendChild(btn);
+        
+        // Style tombol
+        btn.style.cssText = `
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #1a4d3c, #2d5a47);
+            color: #f5f5dc;
+            border: 2px solid #f5f5dc;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 998;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: bounce 2s infinite;
+        `;
+    }
+}
+
+function hideBlessingButton() {
+    const btn = document.querySelector('.show-blessing-btn');
+    if (btn) btn.remove();
+}
+
+// Mobile detection
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
+// Handle blessing display based on screen size
+function handleBlessingDisplay() {
+    const blessing = document.getElementById('dailyBlessing');
+    const closeBtn = document.querySelector('.blessing-close-mobile');
+    
+    if (isMobile()) {
+        // Di mobile: check apakah user pernah hide
+        const blessingHidden = localStorage.getItem('blessingHidden');
+        if (!blessingHidden) {
+            blessing.classList.add('show');
+            closeBtn.style.display = 'flex';
+        } else {
+            blessing.classList.remove('show');
+            showBlessingButton();
+        }
+    } else {
+        // Di desktop: selalu tampil
+        blessing.classList.add('show');
+        closeBtn.style.display = 'none';
+        hideBlessingButton();
+    }
+}
+
+// Update on resize
+window.addEventListener('resize', handleBlessingDisplay);
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    handleBlessingDisplay();
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('show');
+        });
+    });
+});
+
+// Prevent zoom on mobile inputs
+document.querySelectorAll('input, select, textarea').forEach(element => {
+    element.addEventListener('touchstart', () => {
+        element.style.fontSize = '16px';
+    });
+});
+
+// ===== UPDATE AUDIO POSITION FOR MOBILE =====
+// Modify toggleAudio function to handle mobile
+const originalToggleAudio = toggleAudio;
+toggleAudio = function() {
+    originalToggleAudio();
+    // On mobile, maybe show a mini player
+    if (isMobile() && isPlaying) {
+        // Show mini player if needed
+    }
+};
+
+// ===== UPDATE BACK TO TOP FOR MOBILE =====
+// Add touch-friendly behavior
+backToTop.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// ===== FIX WIDGET OVERLAP ON MOBILE =====
+function adjustWidgetPositions() {
+    if (isMobile()) {
+        const audio = document.querySelector('.audio-ambient');
+        const backTop = document.getElementById('backToTop');
+        const blessing = document.getElementById('dailyBlessing');
+        
+        // Check if blessing is visible
+        if (blessing.classList.contains('show')) {
+            audio.style.bottom = '140px';
+            backTop.style.bottom = '140px';
+        } else {
+            audio.style.bottom = '20px';
+            backTop.style.bottom = '20px';
+        }
+    } else {
+        // Reset desktop positions
+        document.querySelector('.audio-ambient').style.bottom = '100px';
+        document.getElementById('backToTop').style.bottom = '30px';
+    }
+}
+
+// Update positions when blessing toggles
+const originalHideBlessing = hideBlessing;
+hideBlessing = function() {
+    originalHideBlessing();
+    adjustWidgetPositions();
+};
+
+const originalShowBlessing = showBlessing;
+showBlessing = function() {
+    originalShowBlessing();
+    adjustWidgetPositions();
+};
+
+// Update on scroll
+window.addEventListener('scroll', adjustWidgetPositions);
     </script>
 </body>
 </html>
